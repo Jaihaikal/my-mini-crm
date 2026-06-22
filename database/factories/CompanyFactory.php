@@ -17,11 +17,13 @@ class CompanyFactory extends Factory
      */
     public function definition(): array
     {
+        $companyName = $this->faker->company;
+        $slug = strtolower(preg_replace('/[^A-Za-z0-9]/', '', $companyName));
+
         return [
-            "name"=> $this->faker->name,
-            'email'=> $this->faker->unique()->companyEmail,
-            'logo'=> null,
-            'website'=> $this->faker->url,
+            'name' => $this->faker->name . ' Sdn Bhd',
+            'email' => 'info@' . $slug . '.com.my',             'logo'=> null,
+            'website' => $this->faker->url,
         ];
     }
 }

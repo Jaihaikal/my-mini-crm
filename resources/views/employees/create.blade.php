@@ -7,7 +7,7 @@
 
     <div class="py-12 ">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 border border-gray-300 shadow-sm">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 border border-gray-300 shadow-smz">
                 <form action="{{ route('employees.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
@@ -52,12 +52,6 @@
                                 </option>
                             @endforeach
                         </select>
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="avatar" class="block text-sm font-medium text-gray-700">Avatar</label>
-                        <input type="file" name="avatar" id="avatar"
-                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                     </div>
 
                     <div class="flex items-center justify-between">
