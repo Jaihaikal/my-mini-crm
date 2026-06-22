@@ -68,8 +68,7 @@
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     @if($company->logo)
-                                        <img src="{{ asset('storage/' . $company->logo) }}"
-                                            class="w-12 h-12 object-cover rounded">
+                                        <img src="{{ asset('storage/' . $company->logo) }}" class="w-12 h-12 object-cover rounded">
                                     @else
                                         <div
                                             class="w-12 h-12 bg-gray-200 flex items-center justify-center text-xs text-gray-500 rounded">
