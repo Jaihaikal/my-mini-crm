@@ -80,17 +80,6 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $company->email ?? '-' }}
                                 </td>
-                                <!-- <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                @if($company->website)
-                                                    <a href="{{ $company->website }}" target="_blank"
-                                                        class="text-blue-600 hover:underline">{{ $company->website }}</a>
-                                                @else - @endif
-                                            </td> -->
-                                <!-- <td>
-                                                <a href="{{ $company->website }}" target="_blank" class="text-blue-600 hover:underline">
-                                                    {{ $company->website }}
-                                                </a>
-                                            </td> -->
 
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                     <div class="max-w-xs truncate" title="{{ $company->website }}">

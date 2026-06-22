@@ -12,7 +12,7 @@ class StoreEmployeeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,9 +26,8 @@ class StoreEmployeeRequest extends FormRequest
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'company_id' => 'required|exists:companies,id',
-            'email' => 'nullable|email|unique:employees,email',
+            'email' => 'nullable |email|unique:employees,email',
             'phone' => 'nullable|string|max:20',
-            //
         ];
     }
 }

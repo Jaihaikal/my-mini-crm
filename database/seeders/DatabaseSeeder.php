@@ -21,16 +21,17 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Test User',
+            'name' => 'Admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('password'),
         ]);
 
-        $companies = Company::factory(10)->create();
+        $companies = Company::factory(20)->create();
 
-        Employee::factory(50)->create()->each(function ($employee) use ($companies) {
-            $employee->company_id = $companies->random()->id;
-            $employee->save();
-        });
+        Employee::factory(50)->create([
+            'company_id' => function()use ($companies){
+                return $companies->random()->id;
+            }
+        ]);
     }
 }

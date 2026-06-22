@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\Employee;
-
+use App\Models\Company;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreEmployeeRequest;
+use App\Http\Requests\UpdateEmployeeRequest;
 
 class EmployeeController extends Controller
 {
@@ -22,15 +24,20 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        $companies = Company::orderBy('name', 'asc')->get();
+
+        return view("employees.create", compact("companies"));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreEmployeeRequest $request)
     {
-        //
+        $validatedData = $request->validated();
+        Employee::create($validatedData);
+
+        return redirect()->route('employees.index')->with('success', 'Employee created successfully.');
     }
 
     /**
@@ -44,24 +51,37 @@ class EmployeeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Employee $employee)
     {
-        //
+        $companies = Company::orderBy('name', 'asc')->get();
+
+        return view('employees.edit', compact('employee', 'companies'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
-        //
+        $validatedData = $request->validated();
+        $employee->update($validatedData);
+
+        return redirect()->route('employees.index')->with('success', 'Employee updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Employee $employee)
     {
-        //
+        $employee->delete();
+
+        return redirect()->route('employees.index')->with('success', 'Employee deleted successfully.');
     }
 }
+
