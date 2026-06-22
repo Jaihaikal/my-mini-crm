@@ -87,6 +87,8 @@ npm run dev
 ```
 3. Open your browser and navigate to the auto-generated local domain:
 👉 http://my_mini_crm.test
-or
-Right-click on Laragon, go to www-> my-mini-crm
+
+    or
+
+    Right-click on Laragon, choose www, my-mini-crm
 
