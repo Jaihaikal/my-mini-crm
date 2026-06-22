@@ -1,5 +1,5 @@
-# Xperts-Assesment
-Assesment for mini CRM
+# Xperts-Assessment
+Assessment for mini CRM
 
 ## 🚀 Quick Start Guide (Using Laragon)
 
@@ -42,11 +42,11 @@ npm install
 ### 3. Environment Setup & App Key
 Create your local environment file and generate the application encryption key:
 
-Copy the env.example to env
+1. Copy the env.example to env
 ```
 cp .env.example .env
 ```
-generate the application encryption key
+2. Generate the application encryption key
 ```
 php artisan key:generate
 ```
@@ -54,14 +54,14 @@ php artisan key:generate
 ### 4. Create Database & Run Migrations
 1. Open Laragon, click Start All.
 
-2. Click the Database button in Laragon (or open your preferred client like HeidiSQL) and create a blank database named: xperts_assesment.
+2. Click the Database button in Laragon (or open your preferred client like HeidiSQL) and create a blank database named: xperts_assessment.
 
 3. Verify your .env matches your local database settings (the default Laragon connection configuration is shown below):
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=xperts_assesment
+DB_DATABASE=xperts_assessment
 DB_USERNAME=root
 DB_PASSWORD=
 ```
