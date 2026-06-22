@@ -6,8 +6,8 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+        <div class="max-w-4xl mx-auto sm:px-6 lg:px-8 ">
+            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg border border-gray-300 shadow-sm">
                 
                 @if ($errors->any())
                     <div class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
@@ -51,9 +51,9 @@
                     </div>
 
                     <div class="flex items-center justify-between">
-                        <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        <x-primary-button type="submit" class="text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                             Update Company
-                        </button>
+                        </x-primary-button>
                         <a href="{{ route('companies.index') }}" class="text-sm text-gray-600 hover:underline">Cancel</a>
                     </div>
                 </form>

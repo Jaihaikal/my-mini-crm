@@ -32,29 +32,14 @@
                     });
                 </script>
             @endif
-            <!-- @if (session('success'))
-                <div id="flash-message" class="mb-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div
-                        class="bg-emerald-500 text-white px-4 py-3 rounded-lg shadow-md flex items-center justify-between transition-opacity duration-500">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                                </path>
-                            </svg>
-                            <span class="font-medium">{{ session('success') }}</span>
-                        </div>
-                    </div>
-                </div>
-            @endif -->
-
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
-                <table class="min-w-full divide-y divide-gray-300">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6 border border-gray-300 shadow-sm">
+                <table class="min-w-full divide-y divide-gray-500">
                     <thead class="bg-gray-50">
                         <tr>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Logo</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Name</th>
+                                Company Name</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Email</th>
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
